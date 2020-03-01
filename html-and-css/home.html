@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="museum">
+	<title>Community Science Museum</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="home">
+			<nav>
+				<img class="logo" src="image/logo.png">
+				<ul class="nav-menu">
+					<li><a href="home.html">HOME</a></li>
+					<li><a href="todo.html">THINGS TO DO</a></li>
+					<li><a href="ticket.html">TICKETS</a></li>
+					<li><a href="aboutus.html">ABOUT US</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+
+				</ul>
+			</nav>
+	</header>
+
+
+
+
+<div class="slideshow-container">
+
+	<div class="slideshow fade">
+    	<div class="imgnumber">1 / 3</div>
+    	<img src="image/spaceman.jpg" style="width:100%">
+  	</div>
+
+ 	 <div class="slideshow fade">
+  	  <div class="imgnumber">2 / 3</div>
+  	  <img src="image/mammoth.jpg" style="width:100%">
+	 </div>
+
+ 	 <div class="slideshow fade">
+ 	  <div class="imgnumber">3 / 3</div>
+    	<img src="image/genoa.jpg" style="width:100%">
+ 	 </div>
+
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+
+	<div style="text-align:center">
+  		<span class="dot" onclick="currentSlide(1)"></span> 
+  		<span class="dot" onclick="currentSlide(2)"></span> 
+  		<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+
+<script>
+
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slideshow");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</div>
+
+
+
+
+<div class="home-text">
+
+<h2>WELCOME TO COMMUNITY SCIENCE MUSEUM</h2>
+
+<p> Come join us at the Community Science Museum where we’re committed to making science accessible o all.
+	Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.
+	The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.
+</p>
+</div>
+
+
+
+
+
+
+<div class="discover-section">
+	
+	<div class="discover">
+		
+	</div>
+	<div class="discover discover-1">
+		
+	</div>
+
+	<div class="discover discover-2">
+		
+	</div>
+
+</div>
+
+
+
+
+
+<footer>
+	<div class="inner-footer">
+		<div class="footer-third">
+			<h1>Links</h1>
+			<a href="todo.html">THINGS TO DO</a>
+			<a href="ticket.html">TICKETS</a>
+			<a href="aboutus.html">ABOUT US</a>
+			<a href="contact.html">CONTACT</a>
+		</div>
+
+
+		<div class="footer-third">
+			<h1>Opening hours</h1>
+			<p>mon: closed</p>
+			<p>tue-thu: 10:00-16:00</p>
+			<p>fri: 10:00-19:00</p>
+			<p>sat: 09:00-16:00</p>
+			<p>sun: 09:00-13:00</p>
+		</div>
+
+	</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
